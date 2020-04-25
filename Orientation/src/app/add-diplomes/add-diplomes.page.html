@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Ajouter Diplomes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="addForm">
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input autocapitalize type="text" formControlName="intituleDiplome" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="text"></ion-icon>
+        <ion-label position="floating">Specialite</ion-label>
+        <ion-input autocapitalize type="text" formControlName="specialite" required></ion-input>
+      </ion-item>
+      <ion-button (click)="submit()" expand="block" fill="clear" type='submit' [disabled]="!addForm.valid">
+        <ion-icon slot="end" name="create" size="large"></ion-icon>
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>

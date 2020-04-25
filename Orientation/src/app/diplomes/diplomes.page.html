@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Diplomes</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="add-circle" size="large" [routerLink]="['/add-diplomes']" routerLinkActive="router-link-active" ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">List Diplomes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let Diplomes of Diplome" [routerLink]="'/detail/'+Diplomes.idDiplome" routerLinkActive="router-link-active" >
+        {{Diplomes.intituleDiplome}} {{Diplomes.specialite}}
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p class="footer">Copy&right by Groupe</p>
+</ion-footer>
