@@ -35,7 +35,7 @@ public class DeboucheController {
         }
     }
 
-    @PostMapping("/addDebouche")
+    @PostMapping("/ajouterDebouche")
     public ResponseEntity<Object> save(@RequestBody Debouche debouche){
         deboucheRepository.save(debouche);
         return ResponseEntity.ok("");
