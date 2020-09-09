@@ -19,7 +19,7 @@ public class DeboucheController {
     public DeboucheController(DeboucheRepository deboucheRepository){
         this.deboucheRepository = deboucheRepository;
     }
-    @GetMapping("/listDebouche")
+    @GetMapping("/istDebouche")
     public List<Debouche> findAll(){
         return deboucheRepository.findAll();
     }
