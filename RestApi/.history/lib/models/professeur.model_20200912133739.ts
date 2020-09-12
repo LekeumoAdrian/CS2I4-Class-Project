@@ -1,0 +1,43 @@
+export {};
+const { Model } = require("sequelize");
+export default (sequelize, DataTypes) => {
+	class Professeur extends Model {
+	/**
+	 * Helper method for defining associations.
+	 * This method is not a part of Sequelize lifecycle.
+	 * The `models/index` file will call this method automatically.
+	 */
+	static associate(models) {
+		// define association here
+	}
+	static getClass() {
+		const classname = this.toString().split("(" || /s+/)[0].split(" " || /s+/)[1];
+
+		return classname;
+	}
+}
+Professeur.init({
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+		allowNull: false
+	},
+	nom: {
+		type: DataTypes.STRING(30),
+	},
+	prenom: {
+		type: DataTypes.STRING(20),
+	},
+	date_naiss: {
+		type: DataTypes.DATE,
+	},
+	id_matiere: {
+		type: DataTypes.INTEGER,
+	}
+}, {
+	sequelize,
+	modelName: "Professeur",
+});
+return Professeur;
+};

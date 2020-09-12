@@ -1,0 +1,44 @@
+{
+  "mysql": {
+    "driver": "mysql",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "database": "",
+    "username": "",
+    "password": "",
+    "unix_socket": "",
+    "charset": "utf8",
+    "collation": "utf8_unicode_ci",
+    "prefix": "",
+    "strict": true,
+    "engine": null
+  },
+  "postgre": {
+    "driver": "postgres",
+    "username": "2t",
+    "password": "2TCorp2019!",
+    "database": "immo_db",
+    "dialect": "postgres",
+    "charset": "utf8",
+    "host_recette": "87.106.127.124",
+    "host": "217.160.44.197",
+    "port": 5432,
+    "secret": "S3cr3t",
+    "prefix": "",
+    "schema": "public",
+    "sslmode": "prefer"
+  },
+  "mongodb": {
+    "driver": "mongodb",
+    "host": "",
+    "host_recette": "",
+    "host_dev": "",
+    "port": 25071,
+    "database": "",
+    "username": "",
+    "password": "",
+    "prefix": "",
+    "strict": true,
+    "engine": null
+  }
+}
